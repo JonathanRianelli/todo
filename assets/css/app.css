@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: hsl(234, 39%, 85%);
+  overflow-y: hidden;
+}
+
+.pag {
+  background-color: hsl(235, 21%, 11%);
+  height: 100vh;
+}
+
+.light {
+  background-color: #fff;
+}
+
+.bg {
+  position: absolute;
+  background: url('/images/bg-desktop-dark.jpg') center center /cover no-repeat;
+  top: 0;
+  width: 100%;
+  height: 233px;
+}
+
+section {
+  width: 420px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 10px;
+  margin: 60px 0 30px;
+}
+
+button {
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+
+.mode-btn {
+  margin: 60px 0 30px;
+}
+
+.moon {
+  display: none;
+}
+
+.name-form {
+  background-color: hsl(235, 24%, 19%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: hsl(234, 39%, 85%);
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  height: 50px;
+  width: 100%;
+}
+
+#list {
+  background-color: hsl(235, 24%, 19%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 4px;
+}
+
+.list-items {
+  max-height: 52vh;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(94, 94, 94, 0.548);
+  border-radius: 20px;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  height: 50px;
+  align-items: center;
+  border-bottom: solid hsl(237, 14%, 26%) 1px;
+  max-height: 20vh;
+  overflow: auto;
+}
+
+.check-btn {
+  border: solid hsl(237, 14%, 26%) 1px;
+  border-radius: 100%;
+  margin-left: 16px;
+  height: 25px;
+  width: 25px;
+}
+
+.check-btn:hover {
+  border-color: rgba(192, 88, 243, 1);
+}
+
+.complete .check-btn {
+  background: rgb(87, 221, 255);
+  background: linear-gradient(135deg, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 100%);
+}
+
+.check-btn>svg {
+  display: none;
+}
+
+.complete .check-btn>svg {
+  display: inherit;
+}
+
+.item>p {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.complete p {
+  color: hsl(234, 11%, 52%);
+  text-decoration: line-through;
+}
+
+.remove-btn {
+  display: none;
+  position: absolute;
+  right: 17px;
+}
+
+.item:hover>.remove-btn {
+  display: inherit;
+}
+
+.list-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border-top: solid hsl(237, 14%, 26%) 1px;
+}
+
+.list-info>span {
+  font-size: 12px;
+  color: hsl(233, 14%, 35%);
+  margin-left: 20px;
+}
+
+.fil-btn {
+  font-size: 12px;
+  color: hsl(233, 14%, 35%);
+}
+
+.fil-btn:hover {
+  color: hsl(236, 33%, 92%);
+}
+
+.list-info>button {
+  font-size: 12px;
+  color: hsl(233, 14%, 35%);
+  margin-right: 13px;
+}
+
+.fActive {
+  color: hsl(220, 98%, 61%);
+}
+
+.list-info>button:hover {
+  color: hsl(236, 33%, 92%);
+}
+
+/* Light mode */
+
+
+
+.light .bg {
+  background: url('/images/bg-desktop-light.jpg') center center /cover no-repeat;
+}
+
+.light .moon {
+  display: initial;
+}
+
+.light .sun {
+  display: none;
+}
+
+.light .name-form {
+  background-color: #fff;
+  color: hsl(235, 19%, 35%);
+}
+
+.light #list {
+  background-color: #fff;
+}
+
+.light .item {
+  border-bottom-color: hsl(233, 11%, 84%);
+}
+
+.light .check-btn {
+  border-color: hsl(233, 11%, 84%);
+}
+
+.light .check-btn:hover {
+  border-color: rgba(192, 88, 243, 1);
+}
+
+.light .item>p {
+  color: hsl(235, 19%, 35%);
+}
+
+.light .list-info {
+  border-color: hsl(233, 11%, 84%);
+}
+
+.light .list-info>span {
+  color: hsl(236, 9%, 61%);
+}
+
+.light .fil-btn {
+  color: hsl(236, 9%, 61%);
+}
+
+.light .fil-btn:hover {
+  color: hsl(235, 19%, 35%);
+}
+
+.light .list-info>button {
+  color: hsl(236, 9%, 61%);
+}
+
+.light .fActive {
+  color: hsl(220, 98%, 61%);
+}
+
+.light .list-info>button:hover {
+  color: hsl(235, 19%, 35%);
+}
+
+@media (max-width: 465px) {
+
+  .bg {
+    background: url('/images/bg-mobile-dark.jpg') center center /cover no-repeat;
+    height: 170px;
+  }
+
+  .light>.bg {
+    background: url('/images/bg-mobile-light.jpg') center center /cover no-repeat;
+  }
+
+  section {
+    max-width: 290px;
+  }
+
+  h1 {
+    font-size: 23px;
+    margin: 34px 0 25px;
+  }
+
+  .mode-btn {
+    margin: 34px 0 25px;
+  }
+
+  input {
+    font-size: 11px;
+    margin-bottom: 20px;
+    height: 40px;
+  }
+
+  #list {
+    position: relative;
+  }
+
+  .item>p {
+    margin-left: 10px;
+    font-size: 11px;
+  }
+
+  .remove-btn {
+    display: inherit;
+  }
+
+  .filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background-color: hsl(235, 24%, 19%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    position: absolute;
+    margin-bottom: -70px;
+    bottom: 0;
+  }
+
+  .light .filters {
+    background-color: #fff;
+  }
+
+}
