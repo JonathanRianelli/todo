@@ -63,8 +63,8 @@ defmodule TodoWeb.TodoLive do
   end
 
   def handle_event("clear_item", _params, socket) do
-    left = length(socket.assigns[:activeItems])
-    {:noreply, assign(socket, completeItems: [], items: socket.assigns[:activeItems], completeItems: [], iLeft: left)}
+    left = length(socket.assigns[:items])
+    {:noreply, assign(socket, completeItems: [], activeItems: socket.assigns[:items], iLeft: left)}
   end
 
   def handle_event("all", _params, socket) do
